@@ -93,5 +93,7 @@ public interface RemoteInterface extends Remote {
 
 	public void enviar() throws RemoteException;
 	public List<CargaDTO> listarCargas() throws RemoteException;
-
+	public void createCarga(CargaDTO cargaDto) throws RemoteException;
+	public void updateCarga(CargaDTO cargaDto) throws RemoteException;
+	public void deleteCarga(int idCarga) throws RemoteException;
 }

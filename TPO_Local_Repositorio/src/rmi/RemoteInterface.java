@@ -6,6 +6,7 @@ import java.util.List;
 
 import dto.CargaDTO;
 import dto.ClienteDTO;
+import dto.DireccionDTO;
 import dto.EmpresaDTO;
 import dto.EnvioDTO;
 import dto.FacturaDTO;
@@ -96,4 +97,6 @@ public interface RemoteInterface extends Remote {
 	public void createCarga(CargaDTO cargaDto) throws RemoteException;
 	public void updateCarga(CargaDTO cargaDto) throws RemoteException;
 	public void deleteCarga(int idCarga) throws RemoteException;
+	public void crearPedido(PedidoDTO p) throws RemoteException;
+	
 }

@@ -22,8 +22,6 @@ public interface RemoteInterface extends Remote {
 	
 	public void cargarDatosIniciales() throws RemoteException;
 
-	public List<SucursalDTO> obtenerSucursales() throws RemoteException;
-
 	public void altaPedido(PedidoDTO pedidoDTO) throws RemoteException;
 	
 	public void altaCliente(ClienteDTO clienteDto) throws RemoteException;
@@ -93,5 +91,11 @@ public interface RemoteInterface extends Remote {
 
 	public void enviar() throws RemoteException;
 	public List<CargaDTO> listarCargas() throws RemoteException;
+	
+	// Sucursal
+	public List<SucursalDTO> obtenerSucursales() throws RemoteException;
+	public void altaSucursal(SucursalDTO sucursalDto) throws RemoteException;
+	public void updateSucursal(SucursalDTO empresaDto) throws RemoteException;
+	public void deleteSucursal(int idSucursal) throws RemoteException;
 
 }

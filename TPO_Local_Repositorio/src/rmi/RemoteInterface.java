@@ -95,7 +95,14 @@ public interface RemoteInterface extends Remote {
 	// Sucursal
 	public List<SucursalDTO> obtenerSucursales() throws RemoteException;
 	public void altaSucursal(SucursalDTO sucursalDto) throws RemoteException;
-	public void updateSucursal(SucursalDTO empresaDto) throws RemoteException;
+	public void updateSucursal(SucursalDTO sucursalDto) throws RemoteException;
 	public void deleteSucursal(int idSucursal) throws RemoteException;
+	
+	// Trayecto
+	public List<TrayectoDTO> obtenerTrayectos() throws RemoteException;
+	public void altaTrayecto(TrayectoDTO trayectDto) throws RemoteException;
+	public void updateTrayecto(TrayectoDTO trayectDto) throws RemoteException;
+	public void deleteTrayecto(int idTrayecto) throws RemoteException;
+	
 
 }

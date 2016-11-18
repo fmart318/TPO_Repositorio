@@ -13,6 +13,7 @@ import dto.HabilitadoDTO;
 import dto.ParticularDTO;
 import dto.SucursalDTO;
 import dto.PedidoDTO;
+import dto.RutaDTO;
 import dto.TransporteDTO;
 import dto.TrayectoDTO;
 import dto.VehiculoDTO;
@@ -47,8 +48,6 @@ public interface RemoteInterface extends Remote {
 	public ViajeDTO obtenerViaje(ViajeDTO viajeDTO) throws RemoteException;
 
 	public void demorarViaje(ViajeDTO viajeDTO, int m) throws RemoteException;
-
-	public void actualizarMapaDeRutas(TrayectoDTO t) throws RemoteException;
 
 	public void actualizarViajes(TrayectoDTO trayDTO, SucursalDTO sucursalDTO)
 			throws RemoteException;
@@ -100,9 +99,16 @@ public interface RemoteInterface extends Remote {
 	
 	// Trayecto
 	public List<TrayectoDTO> obtenerTrayectos() throws RemoteException;
-	public void altaTrayecto(TrayectoDTO trayectDto) throws RemoteException;
-	public void updateTrayecto(TrayectoDTO trayectDto) throws RemoteException;
+	public void altaTrayecto(TrayectoDTO trayectoDto) throws RemoteException;
+	public void updateTrayecto(TrayectoDTO trayectoDto) throws RemoteException;
 	public void deleteTrayecto(int idTrayecto) throws RemoteException;
+	
+	// Ruta
+	public void actualizarMapaDeRutas(TrayectoDTO t) throws RemoteException; // TODO Ojo con esto
+	public List<RutaDTO> obtenerRutas() throws RemoteException;
+	public void altaRuta(RutaDTO rutaDto) throws RemoteException;
+	public void updateRuta(RutaDTO rutaDto) throws RemoteException;
+	public void deleteRuta(int idRuta) throws RemoteException;
 	
 
 }

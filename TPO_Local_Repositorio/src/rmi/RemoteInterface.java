@@ -75,8 +75,7 @@ public interface RemoteInterface extends Remote {
 
 	public PedidoDTO obtenerPedido(int idPedido) throws RemoteException;
 
-	public List<CargaDTO> obtenerCargasDeUnPedido(PedidoDTO pedido)
-			throws RemoteException;
+	
 
 	public List<HabilitadoDTO> obtenerHabilitados() throws RemoteException;
 
@@ -90,7 +89,7 @@ public interface RemoteInterface extends Remote {
 			throws RemoteException;
 
 	public void enviar() throws RemoteException;
-	public List<CargaDTO> listarCargas() throws RemoteException;
+	
 	
 	// Sucursal
 	public List<SucursalDTO> obtenerSucursales() throws RemoteException;
@@ -119,4 +118,8 @@ public interface RemoteInterface extends Remote {
 	//Pedido
 	public void crearPedido(PedidoDTO p) throws RemoteException;
 	
+	//Carga
+	public CargaDTO buscarCargaPorId(int idCarga) throws RemoteException;
+	public List<CargaDTO> obtenerCargasDeUnPedido(PedidoDTO pedido) throws RemoteException;
+	public List<CargaDTO> listarCargas() throws RemoteException;
 }

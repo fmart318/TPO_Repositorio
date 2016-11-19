@@ -122,6 +122,7 @@ public interface RemoteInterface extends Remote {
 	public CargaDTO buscarCargaPorId(int idCarga) throws RemoteException;
 	public List<CargaDTO> obtenerCargasDeUnPedido(PedidoDTO pedido) throws RemoteException;
 	public List<CargaDTO> listarCargas() throws RemoteException;
+	public List<CargaDTO> listarCargasSinDespachar() throws RemoteException;	
 	
 	//Vehículo
 	public VehiculoDTO obtenerVehiculo(VehiculoDTO v) throws RemoteException;

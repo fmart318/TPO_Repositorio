@@ -23,7 +23,7 @@ import dto.ViajeDTO;
 public interface RemoteInterface extends Remote {
 	
 	public void cargarDatosIniciales() throws RemoteException;
-
+	
 	public void altaPedido(PedidoDTO pedidoDTO) throws RemoteException;
 	
 	public void altaCliente(ClienteDTO clienteDto) throws RemoteException;
@@ -89,7 +89,7 @@ public interface RemoteInterface extends Remote {
 	public boolean ControlarVehiculo(VehiculoDTO vehiculoDTO)
 			throws RemoteException;
 
-	public void enviar() throws RemoteException;
+	public void controlarEstadoDeEnvios() throws RemoteException;
 	public List<CargaDTO> listarCargas() throws RemoteException;
 	
 	// Sucursal

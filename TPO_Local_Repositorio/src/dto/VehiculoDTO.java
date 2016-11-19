@@ -1,7 +1,7 @@
 package dto;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 public class VehiculoDTO implements Serializable {
 
@@ -28,7 +28,7 @@ public class VehiculoDTO implements Serializable {
 	public VehiculoDTO(int idVehiculo, String tipo, float volumen, float peso,
 			float ancho, float alto, float profundidad, float tara,
 			int kilometraje, String estado, Boolean enGarantia,
-			Boolean trabajoEspecifico, Date fechaUltimoControl,
+			Boolean trabajoEspecifico, Date fechaUltimoControl2,
 			PlanDeMantenimientoDTO planDeMantenimiento) {
 		super();
 		this.idVehiculo = idVehiculo;
@@ -43,7 +43,7 @@ public class VehiculoDTO implements Serializable {
 		this.estado = estado;
 		this.enGarantia = enGarantia;
 		this.trabajoEspecifico = trabajoEspecifico;
-		this.fechaUltimoControl = fechaUltimoControl;
+		this.fechaUltimoControl = fechaUltimoControl2;
 		this.planDeMantenimiento = planDeMantenimiento;
 	}
 

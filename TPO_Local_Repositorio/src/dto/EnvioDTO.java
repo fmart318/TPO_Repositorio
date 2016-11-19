@@ -14,6 +14,8 @@ public class EnvioDTO implements Serializable {
 	private String estado;
 	private PedidoDTO pedido;
 	private int prioridad;
+	private String sucursalOrigen;
+	private String sucursalDestino;
 
 	public EnvioDTO() {
 
@@ -32,8 +34,6 @@ public class EnvioDTO implements Serializable {
 		this.prioridad = prioridad;
 
 	}
-
-	private String sucursalOrigen;
 
 	public String getSucursalOrigen() {
 		return sucursalOrigen;
@@ -97,6 +97,14 @@ public class EnvioDTO implements Serializable {
 
 	public void setPrioridad(int prioridad) {
 		this.prioridad = prioridad;
+	}
+
+	public String getSucursalDestino() {
+		return sucursalDestino;
+	}
+
+	public void setSucursalDestino(String sucursalDestino) {
+		this.sucursalDestino = sucursalDestino;
 	}
 
 }

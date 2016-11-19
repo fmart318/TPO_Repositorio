@@ -164,4 +164,13 @@ public class PedidoDTO implements Serializable {
 	public void setCliente(ClienteDTO cliente) {
 		this.cliente = cliente;
 	}
+	
+	public float getVolumenoTotalCargas() {
+		float volumenCargaTotal = 0;
+		for (CargaDTO carga : getCargas()) {
+			volumenCargaTotal = carga.getVolumen() + volumenCargaTotal;
+		}
+		return volumenCargaTotal;
+	}
+	
 }

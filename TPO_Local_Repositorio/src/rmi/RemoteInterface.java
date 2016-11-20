@@ -14,9 +14,11 @@ import dto.HabilitadoDTO;
 import dto.ParticularDTO;
 import dto.SucursalDTO;
 import dto.PedidoDTO;
+import dto.PlanDeMantenimientoDTO;
 import dto.RutaDTO;
 import dto.TransporteDTO;
 import dto.TrayectoDTO;
+import dto.VehiculoAMantenerDTO;
 import dto.VehiculoDTO;
 import dto.ViajeDTO;
 
@@ -142,4 +144,11 @@ public interface RemoteInterface extends Remote {
 	
 	//Viaje
 	public List<ViajeDTO> listarViajes() throws RemoteException;
+	
+	//Plan de mantenimiento
+	public List<PlanDeMantenimientoDTO> listarPlanesDeMantenimiento() throws RemoteException;
+	public void altaPlanMantenimiento(PlanDeMantenimientoDTO plan) throws RemoteException;
+	public void deletePlanDeMantenimiento(int idPlan) throws RemoteException;
+	public void updatePlanDeMantenimiento(PlanDeMantenimientoDTO plan) throws RemoteException;
+	public List<VehiculoAMantenerDTO> getVehiculosAMantener() throws RemoteException;
 }

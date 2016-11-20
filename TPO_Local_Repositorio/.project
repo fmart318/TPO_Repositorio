@@ -3,6 +3,8 @@
 	<name>TPO_Local_Repositorio</name>
 	<comment></comment>
 	<projects>
+		<project>TPO_Local_Cliente_Web</project>
+		<project>TPO_Local_Servidor</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

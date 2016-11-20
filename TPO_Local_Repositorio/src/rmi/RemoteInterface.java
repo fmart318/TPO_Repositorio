@@ -137,4 +137,9 @@ public interface RemoteInterface extends Remote {
 	public void modificarDireccion(DireccionDTO d) throws RemoteException;
 	public void eliminarDireccion(DireccionDTO d) throws RemoteException;
 	
+	//Envio
+	public List<EnvioDTO> listarEnvios() throws RemoteException;
+	
+	//Viaje
+	public List<ViajeDTO> listarViajes() throws RemoteException;
 }

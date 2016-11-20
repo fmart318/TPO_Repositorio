@@ -22,6 +22,10 @@ public class PlanDeMantenimientoDTO implements Serializable {
 		this.diasDemora = diasDemora;
 		this.kmProxControl = kmProxControl;
 	}
+	
+	public void setIdPlanDeMantenimiento(int idPlanDeMantenimiento) {
+		this.idPlanDeMantenimiento = idPlanDeMantenimiento;
+	}
 
 	public int getDiasProxControl() {
 		return diasProxControl;

@@ -87,5 +87,5 @@ public class ViajeDTO implements Serializable {
 	public void setVehiculo(VehiculoDTO vehiculo) {
 		this.vehiculo = vehiculo;
 	}
-
+	
 }

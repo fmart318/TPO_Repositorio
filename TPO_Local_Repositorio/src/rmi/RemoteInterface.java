@@ -36,22 +36,12 @@ public interface RemoteInterface extends Remote {
 	
 	public List<ViajeDTO> obtenerViajes() throws RemoteException;
 
-	
-
 	public ViajeDTO obtenerViajePorVehiculo(VehiculoDTO vehiculo)
 			throws RemoteException;
 
 	public void actualiarViaje(ViajeDTO viaje) throws RemoteException;
 
-	public List<ViajeDTO> controlarPedidosDeCliente(ClienteDTO c)
-			throws RemoteException;
-
 	public ViajeDTO obtenerViaje(ViajeDTO viajeDTO) throws RemoteException;
-
-	public void demorarViaje(ViajeDTO viajeDTO, int m) throws RemoteException;
-
-	public void actualizarViajes(TrayectoDTO trayDTO, SucursalDTO sucursalDTO)
-			throws RemoteException;
 
 	public List<TransporteDTO> obtenerTransportesDeTerceros(CargaDTO c,
 			TransporteDTO tr) throws RemoteException;
@@ -71,11 +61,9 @@ public interface RemoteInterface extends Remote {
 	public String validarCredenciales(String username, String password)
 			throws RemoteException;
 
-	public void recibir(ViajeDTO v) throws RemoteException;
 
 	public PedidoDTO obtenerPedido(int idPedido) throws RemoteException;
 
-	
 
 	public List<HabilitadoDTO> obtenerHabilitados() throws RemoteException;
 
@@ -83,7 +71,6 @@ public interface RemoteInterface extends Remote {
 
 	public List<TransporteDTO> obtenerTransportes() throws RemoteException;
 
-	
 
 	public boolean ControlarVehiculo(VehiculoDTO vehiculoDTO)
 			throws RemoteException;
@@ -104,7 +91,6 @@ public interface RemoteInterface extends Remote {
 	public void deleteTrayecto(int idTrayecto) throws RemoteException;
 	
 	// Ruta
-	public void actualizarMapaDeRutas(TrayectoDTO t) throws RemoteException; // TODO Ojo con esto
 	public List<RutaDTO> obtenerRutas() throws RemoteException;
 	public void altaRuta(RutaDTO rutaDto) throws RemoteException;
 	public void updateRuta(RutaDTO rutaDto) throws RemoteException;

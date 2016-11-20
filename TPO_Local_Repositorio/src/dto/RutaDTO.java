@@ -74,13 +74,21 @@ public class RutaDTO implements Serializable {
 		return sucursalDestino;
 	}
 	
-	// TODO Capaz sea innecesario esto despues
 	public void setSucursalOrigen(SucursalDTO sucursalOrigen) {
 		this.sucursalOrigen = sucursalOrigen;
 	}
 
 	public void setSucursalDestino(SucursalDTO sucursalDestino) {
 		this.sucursalDestino = sucursalDestino;
+	}
+	
+	public SucursalDTO getNextSucursal(SucursalDTO sucursal) {
+		for (TrayectoDTO trayecto : trayectos) {
+			if (trayecto.getSucursalOrigen().getIdSucursal() ==  sucursal.getIdSucursal()) {
+				return trayecto.getSucursalDestino();
+			}
+		}
+		return null;
 	}
 
 }

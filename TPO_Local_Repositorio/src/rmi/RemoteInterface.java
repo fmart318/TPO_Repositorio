@@ -36,7 +36,7 @@ public interface RemoteInterface extends Remote {
 	
 	public List<ViajeDTO> obtenerViajes() throws RemoteException;
 
-	public VehiculoDTO obtenerVehiculo(VehiculoDTO v) throws RemoteException;
+	
 
 	public ViajeDTO obtenerViajePorVehiculo(VehiculoDTO vehiculo)
 			throws RemoteException;
@@ -75,8 +75,7 @@ public interface RemoteInterface extends Remote {
 
 	public PedidoDTO obtenerPedido(int idPedido) throws RemoteException;
 
-	public List<CargaDTO> obtenerCargasDeUnPedido(PedidoDTO pedido)
-			throws RemoteException;
+	
 
 	public List<HabilitadoDTO> obtenerHabilitados() throws RemoteException;
 
@@ -84,13 +83,13 @@ public interface RemoteInterface extends Remote {
 
 	public List<TransporteDTO> obtenerTransportes() throws RemoteException;
 
-	public List<VehiculoDTO> obtenerVehiculos() throws RemoteException;
+	
 
 	public boolean ControlarVehiculo(VehiculoDTO vehiculoDTO)
 			throws RemoteException;
 
 	public void controlarEstadoDeEnvios() throws RemoteException;
-	public List<CargaDTO> listarCargas() throws RemoteException;
+
 	
 	// Sucursal
 	public List<SucursalDTO> obtenerSucursales() throws RemoteException;
@@ -118,5 +117,24 @@ public interface RemoteInterface extends Remote {
 	
 	//Pedido
 	public void crearPedido(PedidoDTO p) throws RemoteException;
+	
+	//Carga
+	public CargaDTO buscarCargaPorId(int idCarga) throws RemoteException;
+	public List<CargaDTO> obtenerCargasDeUnPedido(PedidoDTO pedido) throws RemoteException;
+	public List<CargaDTO> listarCargas() throws RemoteException;
+	public List<CargaDTO> listarCargasSinDespachar() throws RemoteException;	
+	
+	//Veh�culo
+	public VehiculoDTO obtenerVehiculo(VehiculoDTO v) throws RemoteException;
+	public List<VehiculoDTO> obtenerVehiculos() throws RemoteException;
+	public void crearVehiculo(VehiculoDTO v) throws RemoteException;
+	public void modificarVehiculo(VehiculoDTO v) throws RemoteException;
+	public void eliminarVehiculo(VehiculoDTO v) throws RemoteException;
+	
+	//Direcciones
+	public List<DireccionDTO> listarDirecciones() throws RemoteException;
+	public void crearDireccion(DireccionDTO d) throws RemoteException;
+	public void modificarDireccion(DireccionDTO d) throws RemoteException;
+	public void eliminarDireccion(DireccionDTO d) throws RemoteException;
 	
 }

@@ -38,13 +38,6 @@ public interface RemoteInterface extends Remote {
 	
 	public List<ViajeDTO> obtenerViajes() throws RemoteException;
 
-	public ViajeDTO obtenerViajePorVehiculo(VehiculoDTO vehiculo)
-			throws RemoteException;
-
-	public void actualiarViaje(ViajeDTO viaje) throws RemoteException;
-
-	public ViajeDTO obtenerViaje(ViajeDTO viajeDTO) throws RemoteException;
-
 	public List<TransporteDTO> obtenerTransportesDeTerceros(CargaDTO c,
 			TransporteDTO tr) throws RemoteException;
 
@@ -112,8 +105,7 @@ public interface RemoteInterface extends Remote {
 	public List<CargaDTO> listarCargas() throws RemoteException;
 	public List<CargaDTO> listarCargasSinDespachar() throws RemoteException;	
 	
-	//Veh�culo
-	public VehiculoDTO obtenerVehiculo(VehiculoDTO v) throws RemoteException;
+	//Vehiculo
 	public List<VehiculoDTO> obtenerVehiculos() throws RemoteException;
 	public void crearVehiculo(VehiculoDTO v) throws RemoteException;
 	public void modificarVehiculo(VehiculoDTO v) throws RemoteException;

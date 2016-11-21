@@ -9,8 +9,8 @@ public class PlanDeMantenimientoDTO implements Serializable {
 	private int diasProxControl;
 	private int diasDemora;
 	private int kmProxControl;
-//	private String puntoAControlar;
-//	private String tareas;
+	private String puntoAControlar;
+	private String tareas;
 
 	public PlanDeMantenimientoDTO() {
 		super();
@@ -57,20 +57,20 @@ public class PlanDeMantenimientoDTO implements Serializable {
 		return idPlanDeMantenimiento;
 	}
 
-//	public String getPuntoAControlar() {
-//		return puntoAControlar;
-//	}
-//
-//	public void setPuntoAControlar(String puntoAControlar) {
-//		this.puntoAControlar = puntoAControlar;
-//	}
-//
-//	public String getTareas() {
-//		return tareas;
-//	}
-//
-//	public void setTareas(String tareas) {
-//		this.tareas = tareas;
-//	}
+	public String getPuntoAControlar() {
+		return puntoAControlar;
+	}
+
+	public void setPuntoAControlar(String puntoAControlar) {
+		this.puntoAControlar = puntoAControlar;
+	}
+
+	public String getTareas() {
+		return tareas;
+	}
+
+	public void setTareas(String tareas) {
+		this.tareas = tareas;
+	}
 	
 }

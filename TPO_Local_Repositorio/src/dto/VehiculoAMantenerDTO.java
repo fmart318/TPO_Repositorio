@@ -11,6 +11,7 @@ public class VehiculoAMantenerDTO implements Serializable {
 	private String tipoDeTrabajo;
 	private String puntoAControlar;
 	private String tareas;
+	private String estado;
 	
 	public int getIdVehiculo() {
 		return idVehiculo;
@@ -50,6 +51,14 @@ public class VehiculoAMantenerDTO implements Serializable {
 
 	public void setTareas(String tareas) {
 		this.tareas = tareas;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 	
 }

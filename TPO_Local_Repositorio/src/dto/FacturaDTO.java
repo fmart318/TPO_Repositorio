@@ -20,6 +20,10 @@ public class FacturaDTO implements Serializable {
 		this.precio = precio;
 	}
 
+	public void setIdFactura(int idFactura) {
+		this.idFactura = idFactura;
+	}
+
 	public PedidoDTO getPedido() {
 		return pedido;
 	}

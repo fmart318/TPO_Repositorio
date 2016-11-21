@@ -16,6 +16,7 @@ import dto.SucursalDTO;
 import dto.PedidoDTO;
 import dto.PlanDeMantenimientoDTO;
 import dto.PrecioVehiculoDTO;
+import dto.ProductoDTO;
 import dto.RutaDTO;
 import dto.TransporteDTO;
 import dto.TrayectoDTO;
@@ -106,6 +107,7 @@ public interface RemoteInterface extends Remote {
 	
 	//Pedido
 	public void crearPedido(PedidoDTO p) throws RemoteException;
+	public PedidoDTO buscarPedidoPorId(int idPedido) throws RemoteException;
 	
 	//Carga
 	public CargaDTO buscarCargaPorId(int idCarga) throws RemoteException;
@@ -144,6 +146,18 @@ public interface RemoteInterface extends Remote {
 	public void crearVTerceros(PrecioVehiculoDTO v) throws RemoteException;
 	public void modificarVTerceros(PrecioVehiculoDTO v) throws RemoteException;
 	public void eliminarVTerceros(PrecioVehiculoDTO v) throws RemoteException;
-	public void crearEnvioDirecto(PedidoDTO p) throws RemoteException;
+	public void crearEnvioDirecto(int idPedido, int idPrecioVehiculo) throws RemoteException;
+	public PrecioVehiculoDTO buscarPrecioVehiculoDTO(int idPrecioVehiculoDTO) throws RemoteException;
 	
+	//Habilitado
+	public List<HabilitadoDTO> listarHabilitados() throws RemoteException;
+	public void crearHabilitacion(HabilitadoDTO v) throws RemoteException;
+	public void modificarHabilitacion(HabilitadoDTO v) throws RemoteException;
+	public void eliminarHabilitacion(HabilitadoDTO v) throws RemoteException;
+	
+	//productos
+	public List<ProductoDTO> listarProductos() throws RemoteException;
+	public void crearProducto(ProductoDTO v) throws RemoteException;
+	public void modificarProducto(ProductoDTO v) throws RemoteException;
+	public void eliminarProduct(ProductoDTO v) throws RemoteException;
 }

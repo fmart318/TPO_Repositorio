@@ -17,8 +17,8 @@ public class PedidoDTO implements Serializable {
 	private Date fechaMaxima;
 	private List<CargaDTO> cargas;
 	private float precio;
-	private String sucursalDestino;
-	private String sucursalOrigen;
+	private int sucursalDestinoId;
+	private int sucursalOrigenId;
 	private boolean solicitaTransporteDirecto;
 	private boolean solicitaAvionetaParticular;
 	private ClienteDTO cliente;
@@ -29,7 +29,7 @@ public class PedidoDTO implements Serializable {
 	public PedidoDTO(int idPedido, DireccionDTO direccionCarga,
 			DireccionDTO direccionDestino, Date fechaCargaDate, int horaInicio,
 			int horaFin, Date fechaMaximaDate, List<CargaDTO> cargas,
-			float precio, String sucursalDestino, String sucursalOrigen,
+			float precio, int sucursalDestinoId, int sucursalOrigenId,
 			boolean solicitaTransporteDirecto,
 			boolean solicitaAvionetaParticular, ClienteDTO cliente) {
 		super();
@@ -42,8 +42,8 @@ public class PedidoDTO implements Serializable {
 		this.fechaMaxima = fechaMaximaDate;
 		this.cargas = cargas;
 		this.precio = precio;
-		this.sucursalDestino = sucursalDestino;
-		this.sucursalOrigen = sucursalOrigen;
+		this.sucursalDestinoId = sucursalDestinoId;
+		this.sucursalOrigenId = sucursalOrigenId;
 		this.solicitaTransporteDirecto = solicitaTransporteDirecto;
 		this.solicitaAvionetaParticular = solicitaAvionetaParticular;
 		this.cliente = cliente;
@@ -71,14 +71,6 @@ public class PedidoDTO implements Serializable {
 
 	public void setDireccionDestino(DireccionDTO direccionDestino) {
 		this.direccionDestino = direccionDestino;
-	}
-
-	public String getSucursalOrigen() {
-		return sucursalOrigen;
-	}
-
-	public void setSucursalOrigen(String sucursalDestino) {
-		this.sucursalOrigen = sucursalDestino;
 	}
 
 	public Date getFechaCarga() {
@@ -129,14 +121,6 @@ public class PedidoDTO implements Serializable {
 		this.precio = precio;
 	}
 
-	public String getSucursalDestino() {
-		return sucursalDestino;
-	}
-
-	public void setSucursalDestino(String sucursalDestino) {
-		this.sucursalDestino = sucursalDestino;
-	}
-
 	public boolean isSolicitaTransporteDirecto() {
 		return solicitaTransporteDirecto;
 	}
@@ -165,6 +149,22 @@ public class PedidoDTO implements Serializable {
 		this.cliente = cliente;
 	}
 	
+	public int getSucursalDestinoId() {
+		return sucursalDestinoId;
+	}
+
+	public void setSucursalDestinoId(int sucursalDestinoId) {
+		this.sucursalDestinoId = sucursalDestinoId;
+	}
+
+	public int getSucursalOrigenId() {
+		return sucursalOrigenId;
+	}
+
+	public void setSucursalOrigenId(int sucursalOrigenId) {
+		this.sucursalOrigenId = sucursalOrigenId;
+	}
+
 	public float getVolumenoTotalCargas() {
 		float volumenCargaTotal = 0;
 		for (CargaDTO carga : getCargas()) {

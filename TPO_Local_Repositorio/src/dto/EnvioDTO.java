@@ -14,16 +14,14 @@ public class EnvioDTO implements Serializable {
 	private String estado;
 	private PedidoDTO pedido;
 	private int prioridad;
-	private String sucursalOrigen;
-	private String sucursalDestino;
+	private SucursalDTO sucursalOrigen;
+	private SucursalDTO sucursalDestino;
 
-	public EnvioDTO() {
-
-	}
+	public EnvioDTO(){}
 
 	public EnvioDTO(int idEnvio, Date fechaSalida, Date fechaLlegada,
 			boolean cumpleCondicionesCarga, String estado, PedidoDTO pedido,
-			int prioridad) {
+			int prioridad, SucursalDTO sucursalOrigen, SucursalDTO sucursalDestino) {
 		super();
 		this.idEnvio = idEnvio;
 		this.fechaSalida = fechaSalida;
@@ -32,15 +30,8 @@ public class EnvioDTO implements Serializable {
 		this.estado = estado;
 		this.pedido = pedido;
 		this.prioridad = prioridad;
-
-	}
-
-	public String getSucursalOrigen() {
-		return sucursalOrigen;
-	}
-
-	public void setSucursalOrigen(String sucursalOrigen) {
-		this.sucursalOrigen = sucursalOrigen;
+		this.setSucursalOrigen(sucursalOrigen);
+		this.setSucursalDestino(sucursalDestino);
 	}
 
 	public int getIdEnvio() {
@@ -99,12 +90,19 @@ public class EnvioDTO implements Serializable {
 		this.prioridad = prioridad;
 	}
 
-	public String getSucursalDestino() {
+	public SucursalDTO getSucursalOrigen() {
+		return sucursalOrigen;
+	}
+
+	public void setSucursalOrigen(SucursalDTO sucursalOrigen) {
+		this.sucursalOrigen = sucursalOrigen;
+	}
+
+	public SucursalDTO getSucursalDestino() {
 		return sucursalDestino;
 	}
 
-	public void setSucursalDestino(String sucursalDestino) {
+	public void setSucursalDestino(SucursalDTO sucursalDestino) {
 		this.sucursalDestino = sucursalDestino;
 	}
-
 }

@@ -19,6 +19,7 @@ public class VehiculoDTO implements Serializable {
 	private Boolean enGarantia;
 	private Boolean trabajoEspecifico;
 	private Date fechaUltimoControl;
+	private int sucursalIdActual;
 	private PlanDeMantenimientoDTO planDeMantenimiento;
 
 	public VehiculoDTO() {
@@ -28,7 +29,7 @@ public class VehiculoDTO implements Serializable {
 	public VehiculoDTO(int idVehiculo, String tipo, float volumen, float peso,
 			float ancho, float alto, float profundidad, float tara,
 			int kilometraje, String estado, Boolean enGarantia,
-			Boolean trabajoEspecifico, Date fechaUltimoControl2,
+			Boolean trabajoEspecifico, Date fechaUltimoControl2, int sucursalIdActual,
 			PlanDeMantenimientoDTO planDeMantenimiento) {
 		super();
 		this.idVehiculo = idVehiculo;
@@ -43,7 +44,9 @@ public class VehiculoDTO implements Serializable {
 		this.estado = estado;
 		this.enGarantia = enGarantia;
 		this.trabajoEspecifico = trabajoEspecifico;
+		this.setSucursalIdActual(sucursalIdActual);
 		this.fechaUltimoControl = fechaUltimoControl2;
+		
 		this.planDeMantenimiento = planDeMantenimiento;
 	}
 
@@ -158,6 +161,14 @@ public class VehiculoDTO implements Serializable {
 
 	public void setEnGarantia(boolean enGarantia) {
 		this.enGarantia = enGarantia;
+	}
+
+	public int getSucursalIdActual() {
+		return sucursalIdActual;
+	}
+
+	public void setSucursalIdActual(int sucursalIdActual) {
+		this.sucursalIdActual = sucursalIdActual;
 	}
 
 }

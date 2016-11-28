@@ -2,6 +2,7 @@ package dto;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class EnvioDTO implements Serializable {
 
@@ -12,26 +13,28 @@ public class EnvioDTO implements Serializable {
 	private Date fechaLlegada;
 	private boolean cumpleCondicionesCarga;
 	private String estado;
-	private PedidoDTO pedido;
+	private List<PedidoDTO> pedidos;
 	private int prioridad;
 	private SucursalDTO sucursalOrigen;
 	private SucursalDTO sucursalDestino;
+	private int idVehiculo;
 
 	public EnvioDTO(){}
 
 	public EnvioDTO(int idEnvio, Date fechaSalida, Date fechaLlegada,
-			boolean cumpleCondicionesCarga, String estado, PedidoDTO pedido,
-			int prioridad, SucursalDTO sucursalOrigen, SucursalDTO sucursalDestino) {
+			boolean cumpleCondicionesCarga, String estado, List<PedidoDTO> pedidos,
+			int prioridad, SucursalDTO sucursalOrigen, SucursalDTO sucursalDestino, int idVehiculo) {
 		super();
 		this.idEnvio = idEnvio;
 		this.fechaSalida = fechaSalida;
 		this.fechaLlegada = fechaLlegada;
 		this.cumpleCondicionesCarga = cumpleCondicionesCarga;
 		this.estado = estado;
-		this.pedido = pedido;
+		this.setPedidos(pedidos);
 		this.prioridad = prioridad;
 		this.setSucursalOrigen(sucursalOrigen);
 		this.setSucursalDestino(sucursalDestino);
+		this.setVehiculoId(idVehiculo);
 	}
 
 	public int getIdEnvio() {
@@ -74,14 +77,6 @@ public class EnvioDTO implements Serializable {
 		this.estado = estado;
 	}
 
-	public PedidoDTO getPedido() {
-		return pedido;
-	}
-
-	public void setPedido(PedidoDTO pedido) {
-		this.pedido = pedido;
-	}
-
 	public int getPrioridad() {
 		return prioridad;
 	}
@@ -104,5 +99,21 @@ public class EnvioDTO implements Serializable {
 
 	public void setSucursalDestino(SucursalDTO sucursalDestino) {
 		this.sucursalDestino = sucursalDestino;
+	}
+
+	public List<PedidoDTO> getPedidos() {
+		return pedidos;
+	}
+
+	public void setPedidos(List<PedidoDTO> pedidos) {
+		this.pedidos = pedidos;
+	}
+
+	public int getVehiculoId() {
+		return idVehiculo;
+	}
+
+	public void setVehiculoId(int vehiculoId) {
+		this.idVehiculo = vehiculoId;
 	}
 }

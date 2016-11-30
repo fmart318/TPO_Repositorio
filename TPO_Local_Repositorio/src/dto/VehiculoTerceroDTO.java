@@ -19,16 +19,18 @@ public class VehiculoTerceroDTO implements Serializable {
 		super();
 	}
 
-	public VehiculoTerceroDTO(int idVehiculoTercero, String tipoVehiculo,
-			float precio, String estado, Date fechaLlegada, List<PedidoDTO> pedidos) {
+	
+	public VehiculoTerceroDTO(int idVehiculoTercero, String tipoVehiculo, float precio, String estado,
+			Date fechaLlegada, List<PedidoDTO> pedidos) {
 		super();
 		this.idVehiculoTercero = idVehiculoTercero;
 		this.tipoVehiculo = tipoVehiculo;
 		this.precio = precio;
 		this.estado = estado;
-		this.pedidos = pedidos;
 		this.fechaLlegada = fechaLlegada;
+		this.pedidos = pedidos;
 	}
+
 
 	public int getIdVehiculoTercero() {
 		return idVehiculoTercero;

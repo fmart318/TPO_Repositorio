@@ -1,7 +1,6 @@
 package dto;
 
 import java.io.Serializable;
-import java.util.List;
 
 public class EmpresaDTO extends ClienteDTO implements Serializable {
 
@@ -10,21 +9,18 @@ public class EmpresaDTO extends ClienteDTO implements Serializable {
 	private int CUIT;
 	private String tipo;
 	private String detallePoliticas;
-	private List<ProductoDTO> productos;
 	private float saldoCuentaCorriente;
 
 	public EmpresaDTO() {
 		super();
 	}
 
-	public EmpresaDTO(int idCliente, String nombre, int CUIT, String tipo,
-			String detallePoliticas, List<ProductoDTO> productos,
+	public EmpresaDTO(int idCliente, String nombre, int CUIT, String tipo, String detallePoliticas,
 			float saldoCuentaCorriente) {
 		super(idCliente, nombre);
 		this.CUIT = CUIT;
 		this.tipo = tipo;
 		this.detallePoliticas = detallePoliticas;
-		this.productos = productos;
 		this.saldoCuentaCorriente = saldoCuentaCorriente;
 	}
 
@@ -51,15 +47,6 @@ public class EmpresaDTO extends ClienteDTO implements Serializable {
 	public void setDetallePoliticas(String detallePoliticas) {
 		this.detallePoliticas = detallePoliticas;
 	}
-
-	public List<ProductoDTO> getProductos() {
-		return productos;
-	}
-
-	public void setProductos(List<ProductoDTO> productos) {
-		this.productos = productos;
-	}
-
 	public float getSaldoCuentaCorriente() {
 		return saldoCuentaCorriente;
 	}

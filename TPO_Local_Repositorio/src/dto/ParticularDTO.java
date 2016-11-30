@@ -1,7 +1,6 @@
 package dto;
 
 import java.io.Serializable;
-import java.util.List;
 
 public class ParticularDTO extends ClienteDTO implements Serializable {
 
@@ -9,18 +8,15 @@ public class ParticularDTO extends ClienteDTO implements Serializable {
 
 	private int DNI;
 	private String apellido;
-	private List<HabilitadoDTO> habilitados;
 
 	public ParticularDTO() {
 		super();
 	}
 
-	public ParticularDTO(int idCliente, String nombre, int DNI,
-			String apellido, List<HabilitadoDTO> habilitados) {
+	public ParticularDTO(int idCliente, String nombre, int DNI, String apellido) {
 		super(idCliente, nombre);
 		this.DNI = DNI;
 		this.apellido = apellido;
-		this.habilitados = habilitados;
 	}
 
 	public int getDNI() {
@@ -37,14 +33,6 @@ public class ParticularDTO extends ClienteDTO implements Serializable {
 
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
-	}
-
-	public List<HabilitadoDTO> getHabilitados() {
-		return habilitados;
-	}
-
-	public void setHabilitados(List<HabilitadoDTO> habilitados) {
-		this.habilitados = habilitados;
 	}
 
 	public static long getSerialversionuid() {

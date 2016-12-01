@@ -47,6 +47,7 @@ public interface RemoteInterface extends Remote {
 	// Sucursal
 	
 	public List<SucursalDTO> obtenerSucursales() throws RemoteException;
+	public SucursalDTO obtenerSucursalPorId(int idSucursal) throws RemoteException;
 	public void altaSucursal(SucursalDTO sucursalDto) throws RemoteException;
 	public void updateSucursal(SucursalDTO sucursalDto) throws RemoteException;
 	public void deleteSucursal(int idSucursal) throws RemoteException;
@@ -104,7 +105,9 @@ public interface RemoteInterface extends Remote {
 	//Plan de mantenimiento
 	
 	public List<PlanDeMantenimientoDTO> listarPlanesDeMantenimiento() throws RemoteException;
+	public PlanDeMantenimientoDTO obtenerPlanDeMantenimientoPorId(int idPlanDeMantenimiento) throws RemoteException;
 	public void altaPlanMantenimiento(PlanDeMantenimientoDTO plan) throws RemoteException;
+	
 	public void deletePlanDeMantenimiento(int idPlan) throws RemoteException;
 	public void updatePlanDeMantenimiento(PlanDeMantenimientoDTO plan) throws RemoteException;
 	public List<VehiculoAMantenerDTO> getVehiculosAMantener() throws RemoteException;

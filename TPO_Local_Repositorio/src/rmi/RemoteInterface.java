@@ -92,6 +92,7 @@ public interface RemoteInterface extends Remote {
 	//Direcciones
 	
 	public List<DireccionDTO> listarDirecciones() throws RemoteException;
+	public DireccionDTO obtenerDireccionPorId(int idDireccion) throws RemoteException;
 	public void crearDireccion(DireccionDTO d) throws RemoteException;
 	public void modificarDireccion(DireccionDTO d) throws RemoteException;
 	public void eliminarDireccion(DireccionDTO d) throws RemoteException;

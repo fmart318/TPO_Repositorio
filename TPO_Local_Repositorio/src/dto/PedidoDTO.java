@@ -51,6 +51,7 @@ public class PedidoDTO implements Serializable {
 		this.estado = estado;
 	}
 
+	
 	public int getIdPedido() {
 		return idPedido;
 	}

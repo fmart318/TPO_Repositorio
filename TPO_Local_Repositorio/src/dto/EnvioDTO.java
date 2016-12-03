@@ -116,4 +116,14 @@ public class EnvioDTO implements Serializable {
 	public void setVehiculoId(int vehiculoId) {
 		this.idVehiculo = vehiculoId;
 	}
+
+	public int getIdVehiculo() {
+		return idVehiculo;
+	}
+
+	public void setIdVehiculo(int idVehiculo) {
+		this.idVehiculo = idVehiculo;
+	}
+	
+	
 }

@@ -26,8 +26,8 @@ public class VehiculoAMantenerDTO implements Serializable {
 		return hayQueMantener;
 	}
 	
-	public void setHayQueMantener(String hayQueMantener) {
-		this.hayQueMantener = hayQueMantener;
+	public void setHayQueMantener() {
+		this.hayQueMantener = "Si";
 	}
 	
 	public String getTipoDeTrabajo() {

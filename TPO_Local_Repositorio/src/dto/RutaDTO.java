@@ -97,13 +97,6 @@ public class RutaDTO implements Serializable {
 		this.sucursalDestino = sucursalDestino;
 	}
 	
-	public SucursalDTO getNextSucursal(SucursalDTO sucursal) {
-		for (TrayectoDTO trayecto : trayectos) {
-			if (trayecto.getSucursalOrigen().getIdSucursal() ==  sucursal.getIdSucursal()) {
-				return trayecto.getSucursalDestino();
-			}
-		}
-		return null;
-	}
+	
 
 }

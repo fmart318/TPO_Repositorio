@@ -7,10 +7,23 @@ public class VehiculoAMantenerDTO implements Serializable {
 	private static final long serialVersionUID = 7557853164842885672L;
 	
 	private int idVehiculo;
-	private String hayQueMantener;
+	private boolean hayQueMantener;
 	private String tipoDeTrabajo;
 	private String puntoAControlar;
 	private String tareas;
+	
+	public VehiculoAMantenerDTO(int idVehiculo, boolean hayQueMantener, String tipoDeTrabajo, String puntoAControlar,
+			String tareas, String estado, VehiculoDTO vehiculo) {
+		super();
+		this.idVehiculo = idVehiculo;
+		this.hayQueMantener = hayQueMantener;
+		this.tipoDeTrabajo = tipoDeTrabajo;
+		this.puntoAControlar = puntoAControlar;
+		this.tareas = tareas;
+		this.estado = estado;
+		this.vehiculo = vehiculo;
+	}
+
 	private String estado;
 	private VehiculoDTO vehiculo;
 	
@@ -22,12 +35,12 @@ public class VehiculoAMantenerDTO implements Serializable {
 		this.idVehiculo = idVehiculo;
 	}
 	
-	public String isHayQueMantener() {
+	public boolean isHayQueMantener() {
 		return hayQueMantener;
 	}
 	
 	public void setHayQueMantener() {
-		this.hayQueMantener = "Si";
+		this.hayQueMantener = true;
 	}
 	
 	public String getTipoDeTrabajo() {

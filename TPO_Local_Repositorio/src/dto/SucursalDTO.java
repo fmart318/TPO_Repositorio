@@ -10,19 +10,18 @@ public class SucursalDTO implements Serializable {
 	private int idSucursal;
 	private String nombre;
 	private DireccionDTO ubicacion;
-	private List<ViajeDTO> viajes;
+	private List<PedidoDTO> pedidos;
 
 	public SucursalDTO() {
-
 	}
 
 	public SucursalDTO(int idSucursal, String nombre, DireccionDTO ubicacion,
-			List<ViajeDTO> viajes) {
+			List<PedidoDTO> pedidos) {
 		super();
 		this.idSucursal = idSucursal;
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;
-		this.viajes = viajes;
+		this.pedidos = pedidos;
 	}
 
 	public int getIdSucursal() {
@@ -49,11 +48,11 @@ public class SucursalDTO implements Serializable {
 		this.ubicacion = ubicacion;
 	}
 
-	public List<ViajeDTO> getViajes() {
-		return viajes;
+	public List<PedidoDTO> getPedidos() {
+		return pedidos;
 	}
 
-	public void setViajes(List<ViajeDTO> viajes) {
-		this.viajes = viajes;
+	public void setPedidos(List<PedidoDTO> pedidos) {
+		this.pedidos = pedidos;
 	}
 }

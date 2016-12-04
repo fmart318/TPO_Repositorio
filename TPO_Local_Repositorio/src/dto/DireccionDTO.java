@@ -8,6 +8,7 @@ public class DireccionDTO implements Serializable {
 	private int idDireccion;
 	private String calle;
 	private int numero;
+	
 	private int piso;
 	private String departamento;
 	private String CP;

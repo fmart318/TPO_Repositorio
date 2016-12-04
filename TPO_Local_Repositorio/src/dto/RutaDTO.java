@@ -8,30 +8,45 @@ public class RutaDTO implements Serializable {
 	private static final long serialVersionUID = 4870172584415686445L;
 	private int idRuta;
 	private List<TrayectoDTO> trayectos;
+	private List<SucursalDTO> sucursales;
 	private float precio;
 	private SucursalDTO sucursalOrigen;
 	private SucursalDTO sucursalDestino;
 
-	public RutaDTO(int idRuta, List<TrayectoDTO> trayectos, float precio) {
-		super();
-		this.idRuta = idRuta;
-		this.trayectos = trayectos;
-		this.precio = precio;
-	}
 
-	public RutaDTO(int idRuta, List<TrayectoDTO> trayectos, float precio,
+	public RutaDTO() {
+		super();
+	}
+	
+	
+
+	public RutaDTO(int idRuta, List<TrayectoDTO> trayectos, List<SucursalDTO> sucursales, float precio,
 			SucursalDTO sucursalOrigen, SucursalDTO sucursalDestino) {
 		super();
 		this.idRuta = idRuta;
 		this.trayectos = trayectos;
+		this.sucursales = sucursales;
 		this.precio = precio;
-		this.sucursalDestino = sucursalDestino;
 		this.sucursalOrigen = sucursalOrigen;
-
+		this.sucursalDestino = sucursalDestino;
 	}
 
-	public RutaDTO() {
-		super();
+
+
+	public List<SucursalDTO> getSucursales() {
+		return sucursales;
+	}
+
+	public void setSucursales(List<SucursalDTO> sucursales) {
+		this.sucursales = sucursales;
+	}
+
+	public SucursalDTO getSucursalOrigen() {
+		return sucursalOrigen;
+	}
+
+	public SucursalDTO getSucursalDestino() {
+		return sucursalDestino;
 	}
 
 	public float getPrecio() {
@@ -74,7 +89,6 @@ public class RutaDTO implements Serializable {
 		return sucursalDestino;
 	}
 	
-	// TODO Capaz sea innecesario esto despues
 	public void setSucursalOrigen(SucursalDTO sucursalOrigen) {
 		this.sucursalOrigen = sucursalOrigen;
 	}
@@ -82,5 +96,7 @@ public class RutaDTO implements Serializable {
 	public void setSucursalDestino(SucursalDTO sucursalDestino) {
 		this.sucursalDestino = sucursalDestino;
 	}
+	
+	
 
 }

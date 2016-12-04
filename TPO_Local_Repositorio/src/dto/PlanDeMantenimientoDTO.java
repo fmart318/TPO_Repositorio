@@ -9,6 +9,8 @@ public class PlanDeMantenimientoDTO implements Serializable {
 	private int diasProxControl;
 	private int diasDemora;
 	private int kmProxControl;
+	private String puntoAControlar;
+	private String tareas;
 
 	public PlanDeMantenimientoDTO() {
 		super();
@@ -21,6 +23,10 @@ public class PlanDeMantenimientoDTO implements Serializable {
 		this.diasProxControl = diasProxControl;
 		this.diasDemora = diasDemora;
 		this.kmProxControl = kmProxControl;
+	}
+	
+	public void setIdPlanDeMantenimiento(int idPlanDeMantenimiento) {
+		this.idPlanDeMantenimiento = idPlanDeMantenimiento;
 	}
 
 	public int getDiasProxControl() {
@@ -48,7 +54,23 @@ public class PlanDeMantenimientoDTO implements Serializable {
 	}
 
 	public int getIdPlanDeMantenimiento() {
-		// TODO Auto-generated method stub
 		return idPlanDeMantenimiento;
 	}
+
+	public String getPuntoAControlar() {
+		return puntoAControlar;
+	}
+
+	public void setPuntoAControlar(String puntoAControlar) {
+		this.puntoAControlar = puntoAControlar;
+	}
+
+	public String getTareas() {
+		return tareas;
+	}
+
+	public void setTareas(String tareas) {
+		this.tareas = tareas;
+	}
+	
 }
